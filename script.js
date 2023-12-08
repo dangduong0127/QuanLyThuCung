@@ -1,5 +1,4 @@
 "use strict";
-let dataTb = JSON.parse(localStorage.getItem("Pets")) || [];
 
 function RenderDataTable(array) {
   row.innerHTML = null;
@@ -176,4 +175,28 @@ let CalculateBMI = () => {
   );
   localStorage.setItem("Pets", JSON.stringify(dataTb));
   RenderDataTable(dataTb);
+};
+
+// Change Breed following pets type
+let renderBreed = () => {
+  if (type.value === "Cat") {
+    Breed.innerHTML = `<option>Select Breed</option>`;
+    let search = BreedsData.filter((x) => x.type === "Cat");
+    search.forEach((x) => {
+      Breed.innerHTML += `
+        <option>${x.name}</option>
+      `;
+      // console.log(Breed);
+    });
+  } else {
+    Breed.innerHTML = `<option>Select Breed</option>`;
+    let search = BreedsData.filter((x) => x.type === "Dog");
+    search.forEach((x) => {
+      Breed.innerHTML += `
+        
+        <option>${x.name}</option>
+      `;
+      // console.log(Breed);
+    });
+  }
 };

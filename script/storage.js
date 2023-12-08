@@ -40,9 +40,9 @@ const data = [
     Age: 1,
     Color: "#ffffff",
     Breed: "Terrier",
-    Vaccinated: vaccinatedInput.checked,
-    Dewormed: dewormedInput.checked,
-    Sterilized: sterilizedInput.checked,
+    Vaccinated: true,
+    Dewormed: true,
+    Sterilized: true,
     BMIrs: "?",
     date: new Date(),
   },
@@ -62,7 +62,34 @@ const data = [
     date: new Date(),
   },
 ];
+let dataTb = JSON.parse(localStorage.getItem("Pets")) || [];
 
-// localStorage.setItem("Pets", JSON.stringify(data));
-// let obj = JSON.parse(localStorage.getItem("Pets"));
-// console.log(obj);
+let breedArr = [
+  {
+    name: "Mixed Breed",
+    type: "Cat",
+  },
+  {
+    name: "Mixed Breed",
+    type: "Dog",
+  },
+  {
+    name: "Domestic Short Hair",
+    type: "Cat",
+  },
+  {
+    name: "Tabby",
+    type: "Cat",
+  },
+  {
+    name: "Husky",
+    type: "Dog",
+  },
+  {
+    name: "Doberman Pinscher",
+    type: "Dog",
+  },
+];
+let BreedsData = JSON.parse(localStorage.getItem("Breeds")) || [];
+
+// localStorage.setItem("Breeds", JSON.stringify(breedArr));
