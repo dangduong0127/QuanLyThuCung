@@ -62,6 +62,7 @@ const data = [
     date: new Date(),
   },
 ];
+// localStorage.setItem("Pets", JSON.stringify(data));
 let dataTb = JSON.parse(localStorage.getItem("Pets")) || [];
 
 let breedArr = [
