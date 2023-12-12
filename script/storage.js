@@ -13,6 +13,11 @@ const color = document.getElementById("input-color-1");
 const Breed = document.getElementById("input-breed");
 const healthyBtn = document.getElementById("healthy-btn");
 const submitBtn = document.getElementById("submit-btn");
+const a = document.getElementById("sidebar");
+// animation
+a.addEventListener("click", () => {
+  a.classList.toggle("active");
+});
 
 const data = [
   {
@@ -62,7 +67,7 @@ const data = [
     date: new Date(),
   },
 ];
-// localStorage.setItem("Pets", JSON.stringify(data));
+localStorage.setItem("Pets", JSON.stringify(data));
 let dataTb = JSON.parse(localStorage.getItem("Pets")) || [];
 
 let breedArr = [
@@ -93,4 +98,4 @@ let breedArr = [
 ];
 let BreedsData = JSON.parse(localStorage.getItem("Breeds")) || [];
 
-// localStorage.setItem("Breeds", JSON.stringify(breedArr));
+localStorage.setItem("Breeds", JSON.stringify(breedArr));

@@ -52,14 +52,26 @@ let BtnSubmit = () => {
   event.preventDefault();
 
   if (dataTb.length === 0) {
-    if (inputID.value === "") {
-      alert("Chưa nhập ID");
-    } else if (inputName.value === "") {
-      alert("Chưa nhập tên thú cưng");
-    } else if (age.value === "") {
-      alert("Chưa nhập tuổi");
-    } else if (type.value === "") {
-      alert("Chưa nhập loại thú cưng");
+    if (inputName.value === "") {
+      alert("Please input for name");
+    } else if (isNaN(age.value) !== true && age.value === "") {
+      alert("Please input for age");
+    } else if (type.value === "Select Type") {
+      alert("Please select type!!!");
+    } else if (isNaN(Weight.value) !== true && Weight.value === "") {
+      if (isNaN(Weight.value) !== true) {
+        alert("Please input a number for Weight");
+        return;
+      }
+      alert("Please input for weight");
+    } else if (Length.value === "") {
+      if (isNaN(Length.value) !== true) {
+        alert("Please input a number for length");
+        return;
+      }
+      alert("Please input for length");
+    } else if (Breed.value === "Select Breed") {
+      alert("Please input for breed");
     } else {
       dataTb.push({
         ID: inputID.value,
@@ -87,14 +99,26 @@ let BtnSubmit = () => {
       alert("ID này đã tồn tại vui lòng nhập ID khác");
       return;
     } else {
-      if (inputID.value === "") {
-        alert("Chưa nhập ID");
-      } else if (inputName.value === "") {
-        alert("Chưa nhập tên thú cưng");
-      } else if (age.value === "") {
-        alert("Chưa nhập tuổi");
-      } else if (type.value === "") {
-        alert("Chưa nhập loại thú cưng");
+      if (inputName.value === "") {
+        alert("Please input for name");
+      } else if (isNaN(age.value) !== true && age.value === "") {
+        alert("Please input for age");
+      } else if (type.value === "Select Type") {
+        alert("Please select type!!!");
+      } else if (isNaN(Weight.value) !== true && Weight.value === "") {
+        if (isNaN(Weight.value) !== true) {
+          alert("Please input a number for Weight");
+          return;
+        }
+        alert("Please input for weight");
+      } else if (Length.value === "") {
+        if (isNaN(Length.value) !== true) {
+          alert("Please input a number for length");
+          return;
+        }
+        alert("Please input for length");
+      } else if (Breed.value === "Select Breed") {
+        alert("Please input for breed");
       } else {
         dataTb.push({
           ID: inputID.value,
